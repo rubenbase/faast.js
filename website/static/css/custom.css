@@ -4,8 +4,11 @@
     --dark-bg-color: #011627;
     --light-font-color: white;
     --brand-color: #2196f3;
-    --splash-font-color: #eee;
-    --splash-bg-color: rgb(0, 20, 40);
+    /* --splash-font-color: #eee; */
+    /* --splash-bg-color: rgb(0, 20, 40); */
+    --splash-font-color: black;
+    --splash-bg-color: white;
+    --alternate-bg-color: #efefefef;
 }
 
 code.hljs {
@@ -64,11 +67,11 @@ code.hljs {
 
 .heroWrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    border: 1px solid var(--brand-color);
-    padding: 60px 10px;
+    justify-content: space-around;
+    /* border: 1px solid var(--brand-color); */
+    padding: 100px 10px;
     border-radius: 20px;
     max-width: 80%;
     position: relative;
@@ -76,8 +79,8 @@ code.hljs {
 
 .heroWrapper .button {
     margin: 10px 10px;
-    color: var(--splash-font-color);
-    background-color: var(--splash-bg-color);
+    color: var(--light-font-color);
+    background-color: var(--brand-color);
     width: 10em;
 }
 
@@ -86,9 +89,9 @@ code.hljs {
 }
 
 .box {
-    width: 20px;
-    height: 20px;
-    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
     position: absolute;
     transition: 0.5s all;
 }
@@ -109,6 +112,7 @@ header img.logo {
 
 .projectTitle {
     color: var(--splash-font-color);
+    font-size: 60px;
 }
 
 #features h1 {
@@ -134,8 +138,9 @@ header img.logo {
     padding-bottom: 40px;
 }
 
-#cost {
-    padding-bottom: 40px;
+#example,
+#dependencies {
+    background-color: var(--alternate-bg-color);
 }
 
 #zeroops {
@@ -213,12 +218,11 @@ img.prefix {
     #zero {
         width: 150px;
     }
-    .homeContainer {
-        padding-top: 25%;
-        padding-bottom: 25%;
-    }
     .feature {
         padding-top: 40px;
+    }
+    .projectTitle {
+        margin-top: 0;
     }
 }
 

@@ -8,7 +8,7 @@ function animate(hero) {
         contentWidth = Math.max(child.offsetWidth, contentWidth);
     }
     const boxSize = 20;
-    const minBoxPadding = 10;
+    const minBoxPadding = 15;
     const colWidth = (offsetWidth - contentWidth) / 2;
     const cols = Math.min(10, Math.floor(colWidth / (boxSize + minBoxPadding) - 1));
     const rows = Math.min(10, Math.floor(offsetHeight / (boxSize + minBoxPadding) - 1));
@@ -60,7 +60,7 @@ function animate(hero) {
         boxes.forEach(box => {
             const style = box.style;
             const delay = (Math.random() * collapseSpeed) / 1000;
-            style.backgroundColor = "var(--dark-bg-color)";
+            style.backgroundColor = "var(--splash-bg-color)";
             style.border = "1px solid var(--splash-bg-color)";
             style.transitionDelay = delay + "s";
         });
@@ -77,20 +77,20 @@ function animate(hero) {
         return "#003FBB";
     }
 
-    const leftBoxes = makeBoxes("left");
+    // const leftBoxes = makeBoxes("left");
     const rightBoxes = makeBoxes("right");
-    leftBoxContainer = document.createElement("div");
+    // leftBoxContainer = document.createElement("div");
     rightBoxContainer = document.createElement("div");
-    leftBoxContainer.append(...leftBoxes);
+    // leftBoxContainer.append(...leftBoxes);
     rightBoxContainer.append(...rightBoxes);
-    hero.append(leftBoxContainer);
+    // hero.append(leftBoxContainer);
     hero.append(rightBoxContainer);
 
     function transition() {
-        expandBoxes(leftBoxes, "left");
+        // expandBoxes(leftBoxes, "left");
         expandBoxes(rightBoxes, "right");
     }
-    collapseBoxes(leftBoxes);
+    // collapseBoxes(leftBoxes);
     collapseBoxes(rightBoxes);
     setTimeout(transition, 500);
     setInterval(transition, 15000);
@@ -112,7 +112,7 @@ window.addEventListener("load", () => {
 
         resizeTaskId = setTimeout(() => {
             resizeTaskId = null;
-            leftBoxContainer && leftBoxContainer.remove();
+            // leftBoxContainer && leftBoxContainer.remove();
             rightBoxContainer && rightBoxContainer.remove();
             animate(hero);
         }, delay);

@@ -63,7 +63,7 @@ class HomeSplash extends React.Component {
 
         return (
             <SplashContainer>
-                <Logo img_src={`${baseUrl}img/faastjs-blue.svg`} />
+                {/* <Logo img_src={`${baseUrl}img/faastjs-blue.svg`} /> */}
                 <div className="inner">
                     <ProjectTitle siteConfig={siteConfig} />
                     <PromoSection>
@@ -97,7 +97,7 @@ class Index extends React.Component {
         const Block = props => (
             <div className="feature">
                 <Container
-                    padding={props.padding || ["top"]}
+                    padding={props.padding || ["top", "bottom"]}
                     id={props.id}
                     background={props.background}
                 >
